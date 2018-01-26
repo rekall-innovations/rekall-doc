@@ -10,6 +10,8 @@ Welcome to Rekall Forensics's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   efilter
+   plugins
 
 
 Indices and tables
