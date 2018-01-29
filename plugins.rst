@@ -6,6 +6,8 @@ Memory
 Windows
 _______
 
+.. _analyze_struct-AnalyzeStruct-plugin:
+
 analyze_struct (AnalyzeStruct_)
 -------------------------------
 A plugin to analyze a memory location.
@@ -105,6 +107,8 @@ the _EPROCESS address.
 
 
 
+.. _atomscan-AtomScan-plugin:
+
 atomscan (AtomScan_)
 --------------------
 Pool scanner for _RTL_ATOM_TABLE
@@ -135,6 +139,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _AtomScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/atoms.py#L45
+
+.. _atoms-Atoms-plugin:
 
 atoms (Atoms_)
 --------------
@@ -200,6 +206,8 @@ Sample output:
 
 
 
+.. _callback_scan-CallbackScan-plugin:
+
 callback_scan (CallbackScan_)
 -----------------------------
 Print system-wide notification routines by scanning for them.
@@ -216,6 +224,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _CallbackScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/callbacks.py#L340
+
+.. _callbacks-Callbacks-plugin:
 
 callbacks (Callbacks_)
 ----------------------
@@ -310,6 +320,8 @@ name registered (wdf01000!FxpBugCheckCallback).
 
 
 
+.. _certscan-CertYaraScan-plugin:
+
 certscan (CertYaraScan_)
 ------------------------
 Scan certificates in windows memory regions.
@@ -348,6 +360,8 @@ yara_file                      String
 
 .. _CertYaraScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/dumpcerts.py#L164
 
+.. _check_pehooks-CheckPEHooks-plugin:
+
 check_pehooks (CheckPEHooks_)
 -----------------------------
 Checks a pe file mapped into memory for hooks.
@@ -369,6 +383,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _CheckPEHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/apihooks.py#L242
 
+.. _clipboard-Clipboard-plugin:
+
 clipboard (Clipboard_)
 ----------------------
 Extract the contents of the windows clipboard
@@ -387,6 +403,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Clipboard: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/clipboard.py#L30
+
+.. _cmdscan-CmdScan-plugin:
 
 cmdscan (CmdScan_)
 ------------------
@@ -499,6 +517,8 @@ the live memory of a Windows 7 machine.
   --- -------------- --------------------------------------------------
 
 
+.. _connscan-ConnScan-plugin:
+
 connscan (ConnScan_)
 --------------------
 Scan Physical memory for _TCPT_OBJECT objects (tcp connections)
@@ -563,6 +583,8 @@ pid number below.
   0x020869b0 127.0.0.1:1055            127.0.0.1:1056                  2160
 
 
+.. _connections-Connections-plugin:
+
 connections (Connections_)
 --------------------------
 Print list of open connections [Windows XP Only]
@@ -621,6 +643,8 @@ to the TCP endpoints.
 
 
 
+.. _consolescan-ConsoleScan-plugin:
+
 consolescan (ConsoleScan_)
 --------------------------
 Extract command history by scanning for _CONSOLE_INFORMATION
@@ -641,6 +665,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ConsoleScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/cmdhistory.py#L851
+
+.. _consoles-Consoles-plugin:
 
 consoles (Consoles_)
 --------------------
@@ -761,6 +787,8 @@ moderate chance that it will produce no results or garbage results.
   0xfa8001994310 smss.exe                272      4      2       29 ------  False 2012-10-01 21:39:51  -
 
 
+.. _dlldump-DLLDump-plugin:
+
 dlldump (DLLDump_)
 ------------------
 Dump DLLs from a process address space
@@ -819,6 +847,8 @@ to dump.
   0xe0000204a900 winpmem_1.5.2.   0x000077010000 wow64cpu.dll         module.2628.3d04a900.77010000.wow64cpu.dll
 
 
+.. _dtbscan-DTBScan-plugin:
+
 dtbscan (DTBScan_)
 ------------------
 Scans the physical memory for DTB values.
@@ -875,6 +905,8 @@ indication that the process is hidden.
   0x00002f8ce000 0xf6fb7dbed000 0xe00001299900 SearchIndexer.       True
   0x0000207b9000 0xf6fb7dbed000 0xe00002645080 VBoxTray.exe         True
 
+
+.. _devicetree-DeviceTree-plugin:
 
 devicetree (DeviceTree_)
 ------------------------
@@ -944,6 +976,8 @@ directly parse kernel driver structures.
 In the above we can see that the winpmem driver has a device called "pmem". We
 also can see the mouse and keyboard drivers attached to the terminal services
 driver.
+
+.. _driverirp-DriverIrp-plugin:
 
 driverirp (DriverIrp_)
 ----------------------
@@ -1048,6 +1082,8 @@ In the below we see that the pmem driver handles the **IRP_MJ_CREATE**,
     27 IRP_MJ_PNP                           0xf802d31131b8 \SystemRoot\system32\ntoskrnl.exe
 
 
+.. _driverscan-DriverScan-plugin:
+
 driverscan (DriverScan_)
 ------------------------
 Scan for driver objects _DRIVER_OBJECT
@@ -1114,6 +1150,8 @@ in Ring 0.
 
 
 
+.. _dumpfiles-DumpFiles-plugin:
+
 dumpfiles (DumpFiles_)
 ----------------------
 Dump files from memory.
@@ -1138,6 +1176,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DumpFiles: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/cache.py#L151
 
+.. _hooks_eat-EATHooks-plugin:
+
 hooks_eat (EATHooks_)
 ---------------------
 Detect EAT hooks in process and kernel memory
@@ -1157,6 +1197,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _EATHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/apihooks.py#L508
 
+.. _vacbs-EnumerateVacbs-plugin:
+
 vacbs (EnumerateVacbs_)
 -----------------------
 Enumerate all blocks cached in the cache manager.
@@ -1171,6 +1213,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _EnumerateVacbs: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/cache.py#L46
+
+.. _evtlogs-EvtLogs-plugin:
 
 evtlogs (EvtLogs_)
 ------------------
@@ -1215,6 +1259,8 @@ services.exe process, parsed and shown as output.
   2004-05-05 19:37:33+0000 SecEvent.Evt MOIT-A-PHXMOD2 S-1-5-21-487349131-2095749132-2248483902-19753 Security 596 Failure '619be804-cde6-484f-aff4-2a5e588d6eef';'';'';'0x57'
 
 
+
+.. _filescan-FileScan-plugin:
 
 filescan (FileScan_)
 --------------------
@@ -1306,6 +1352,8 @@ work for closed files).
     0xe000000b6a50  32766   1 RW---- 0xe00000074580    4 System           \Windows\System32\config\SECURITY.LOG2
 
 
+.. _show_referrer_alloc-FindReferenceAlloc-plugin:
+
 show_referrer_alloc (FindReferenceAlloc_)
 -----------------------------------------
 Show allocations that refer to an address.
@@ -1322,6 +1370,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _FindReferenceAlloc: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/heap_analysis.py#L397
 
+.. _gahti-Gahti-plugin:
+
 gahti (Gahti_)
 --------------
 Dump the USER handle type information.
@@ -1336,6 +1386,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Gahti: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/userhandles.py#L187
+
+.. _tokens-GetSIDs-plugin:
 
 tokens (GetSIDs_)
 -----------------
@@ -1396,6 +1448,8 @@ with SID `S-1-5-21-1077689984-2177008626-1601812314-1001`.
 
 
 
+.. _getservicesids-GetServiceSids-plugin:
+
 getservicesids (GetServiceSids_)
 --------------------------------
 Get the names of services in the Registry and return Calculated SID
@@ -1439,6 +1493,8 @@ service names are taken from the registry ("SYSTEM\CurrentControlSet\Services")
   S-1-5-80-3267050047-1503497915-401953950-2662906978-1179039408         acpipagr
 
 
+.. _guess_guid-GuessGUID-plugin:
+
 guess_guid (GuessGUID_)
 -----------------------
 Try to guess the exact version of a kernel module by using an index.
@@ -1458,6 +1514,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _GuessGUID: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/index.py#L43
+
+.. _handles-Handles-plugin:
 
 handles (Handles_)
 ------------------
@@ -1544,6 +1602,8 @@ that it has an open file to the raw device *\Device\pmem* and the output file of
   0xe00001d0c340   2628           0x90       0x12019f File             \Device\pmem
 
 
+.. _hivedump-HiveDump-plugin:
+
 hivedump (HiveDump_)
 --------------------
 Prints out a hive
@@ -1559,6 +1619,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _HiveDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/printkey.py#L194
 
+.. _hives-Hives-plugin:
+
 hives (Hives_)
 --------------
 List all the registry hives on the system.
@@ -1573,6 +1635,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Hives: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/registry.py#L654
+
+.. _hooks_iat-IATHooks-plugin:
 
 hooks_iat (IATHooks_)
 ---------------------
@@ -1592,6 +1656,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _IATHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/apihooks.py#L559
+
+.. _imageinfo-ImageInfo-plugin:
 
 imageinfo (ImageInfo_)
 ----------------------
@@ -1644,6 +1710,8 @@ This plugin prints an overview of certain parameters of the image.
   0x000000103000 0x00003fff0000 261869
 
 
+
+.. _impscan-ImpScan-plugin:
 
 impscan (ImpScan_)
 ------------------
@@ -1707,6 +1775,8 @@ verbosity                      IntParser            An integer reflecting the am
   0x7ff7474fa238 0x7ff87edd3074 KERNEL32.DLL         SetPriorityClass
 
 
+.. _hooks_inline-InlineHooks-plugin:
+
 hooks_inline (InlineHooks_)
 ---------------------------
 Detect API hooks in process and kernel memory
@@ -1725,6 +1795,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _InlineHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/apihooks.py#L574
+
+.. _inspect_heap-InspectHeap-plugin:
 
 inspect_heap (InspectHeap_)
 ---------------------------
@@ -1750,6 +1822,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _InspectHeap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/heap_analysis.py#L38
+
+.. _kdbgscan-KDBGScan-plugin:
 
 kdbgscan (KDBGScan_)
 --------------------
@@ -1801,6 +1875,8 @@ debugging symbols.
    extension used this plugin. Currently the KDBG is not used by Rekall at all
    so this plugin is not all that useful.
 
+.. _kpcr-KPCR-plugin:
+
 kpcr (KPCR_)
 ------------
 A plugin to print all KPCR blocks.
@@ -1838,6 +1914,8 @@ system. This plugin displays this infomation.
   Details                       : CPU 0 (GenuineIntel @ 2517 MHz)
   CR3/DTB                       : 0x1a7000
 
+
+.. _ldrmodules-LdrModules-plugin:
 
 ldrmodules (LdrModules_)
 ------------------------
@@ -1949,6 +2027,8 @@ Volatility](http://mnin.blogspot.com/2012/06/quickpost-flame-volatility.html).
    32 bit DLLs in any of the loader lists. This is normal (and you will see the
    Dlls loaded from the \Windows\Wow64 directory.
 
+.. _load_profile-LoadWindowsProfile-plugin:
+
 load_profile (LoadWindowsProfile_)
 ----------------------------------
 Loads the profile into the session.
@@ -1969,6 +2049,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LoadWindowsProfile: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/interactive/profiles.py#L26
+
+.. _malfind-Malfind-plugin:
 
 malfind (Malfind_)
 ------------------
@@ -2119,6 +2201,8 @@ would be written to disk.
   0x0308001e      0000                 ADD [EAX], AL
 
 
+.. _mftdump-MftDump-plugin:
+
 mftdump (MftDump_)
 ------------------
 Enumerate MFT entries from the cache manager.
@@ -2134,6 +2218,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _MftDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/cache.py#L324
 
+.. _mimikatz-Mimikatz-plugin:
+
 mimikatz (Mimikatz_)
 --------------------
 Extract and decrypt passwords from the LSA Security Service.
@@ -2148,6 +2234,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Mimikatz: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/mimikatz.py#L476
+
+.. _miranda-Miranda-plugin:
 
 miranda (Miranda_)
 ------------------
@@ -2165,6 +2253,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Miranda: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/contrib/miranda.py#L131
+
+.. _modscan-ModScan-plugin:
 
 modscan (ModScan_)
 ------------------
@@ -2242,6 +2332,8 @@ temporary location.
   0x00003d6593e0 tunnel.sys           0xf800024ae000        0x2d000 \SystemRoot\system32\DRIVERS\tunnel.sys
 
 
+.. _version_modules-ModVersions-plugin:
+
 version_modules (ModVersions_)
 ------------------------------
 Try to determine the versions for all kernel drivers.
@@ -2316,6 +2408,8 @@ physical memory.
   0xf8800119f10c rdyboost.sys         20E6E50C6F9B42589E18D96AD84608DB1 rdyboost.pdb
 
 
+.. _modules-Modules-plugin:
+
 modules (Modules_)
 ------------------
 Print list of loaded kernel modules.
@@ -2372,6 +2466,8 @@ the order they were loaded on the system.
   0xe00000054b70 ksecpkg.sys          0xf80000db7000        0x34000 \SystemRoot\System32\Drivers\ksecpkg.sys
   0xe00000054100 CLASSPNP.SYS         0xf80000800000        0x56000 \SystemRoot\System32\drivers\CLASSPNP.SYS
 
+
+.. _mutantscan-MutantScan-plugin:
 
 mutantscan (MutantScan_)
 ------------------------
@@ -2457,6 +2553,8 @@ For more information, see Andreas Schuster's [Searching for Mutants](http://comp
   ...
 
 
+
+.. _object_tree-ObjectTree-plugin:
 
 object_tree (ObjectTree_)
 -------------------------
@@ -2564,6 +2662,8 @@ when the pmem driver was loaded.
   0xf8a000006f40 SymbolicLink         . Global-> \GLOBAL?? (2012-10-01 21:39:45+0000)
 
 
+.. _object_types-Objects-plugin:
+
 object_types (Objects_)
 -----------------------
 Displays all object Types on the system.
@@ -2629,6 +2729,8 @@ The below output indicates that there should be 41 processes active, and 548 thr
   ...
 
 
+.. _pedump-PEDump-plugin:
+
 pedump (PEDump_)
 ----------------
 Dump a PE binary from memory.
@@ -2675,6 +2777,8 @@ This plugin is used by the **dlldump**, **moddump**, **procdump** etc plugins.
    tool like IDA pro.
 
 
+.. _pfn-PFNInfo-plugin:
+
 pfn (PFNInfo_)
 --------------
 Prints information about an address from the PFN database.
@@ -2690,6 +2794,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _PFNInfo: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/pfn.py#L52
+
+.. _psscan-PSScan-plugin:
 
 psscan (PSScan_)
 ----------------
@@ -2743,6 +2849,8 @@ specified, the scanning occurs in kernel space.
    may be possible to derive their virtual address using the [ptov](PtoV.html)
    plugin. Alternatively, specify the *scan_in_kernel* option, to ensure
    scanning occurs in the kernel address space.
+
+.. _pstree-PSTree-plugin:
 
 pstree (PSTree_)
 ----------------
@@ -2805,6 +2913,8 @@ another process.
         audit: \Device\HarddiskVolume2\Windows\System32\svchost.exe
 
 
+.. _pagefiles-Pagefiles-plugin:
+
 pagefiles (Pagefiles_)
 ----------------------
 Report all the active pagefiles.
@@ -2819,6 +2929,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Pagefiles: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/pagefile.py#L814
+
+.. _pool_tracker-PoolTracker-plugin:
 
 pool_tracker (PoolTracker_)
 ---------------------------
@@ -2896,6 +3008,8 @@ processes we expect to be preset.
 In the above example we see that there are 48 outstanding *_EPROCESS* objects
 and there are 48 members in the **PsActiveProcessHead** list.
 
+.. _pools-Pools-plugin:
+
 pools (Pools_)
 --------------
 Prints information about system pools.
@@ -2916,6 +3030,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _Pools: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/pool.py#L63
 
+.. _printkey-PrintKey-plugin:
+
 printkey (PrintKey_)
 --------------------
 Print a registry key, and its subkeys and values
@@ -2930,6 +3046,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _PrintKey: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/printkey.py#L39
+
+.. _privileges-Privileges-plugin:
 
 privileges (Privileges_)
 ------------------------
@@ -2949,6 +3067,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Privileges: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/privileges.py#L65
+
+.. _procdump-ProcExeDump-plugin:
 
 procdump (ProcExeDump_)
 -----------------------
@@ -2988,6 +3108,8 @@ The **procdump** plugin is a thin wrapper around the **pedump** plugin.
   **************************************************
   Dumping csrss.exe, pid: 396    output: executable.csrss_exe_396.exe
 
+
+.. _procinfo-ProcInfo-plugin:
 
 procinfo (ProcInfo_)
 --------------------
@@ -3121,6 +3243,8 @@ the PE file (using **peinfo**) as well as the process environment strings.
   ProductVersion       6.1.7600.16385
 
 
+.. _ptov-PtoV-plugin:
+
 ptov (PtoV_)
 ------------
 Converts a physical address to a virtual address.
@@ -3177,6 +3301,8 @@ need to enumerate all address spaces prior to running (so it is a bit faster).
   PDE @ 0x4000000
   PTE @ 0x40011a8
 
+
+.. _raw2dmp-Raw2Dump-plugin:
 
 raw2dmp (Raw2Dump_)
 -------------------
@@ -3283,6 +3409,8 @@ already have.
    Rekall does not have, please let us know so we can implement it in Rekall. We
    intend to replace the use of the windows debugger in digital forensics.
 
+.. _regdump-RegDump-plugin:
+
 regdump (RegDump_)
 ------------------
 Dump all registry hives from memory into a dump directory.
@@ -3299,6 +3427,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _RegDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/printkey.py#L141
 
+.. _services-Services-plugin:
+
 services (Services_)
 --------------------
 Enumerate all services.
@@ -3313,6 +3443,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Services: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/printkey.py#L360
+
+.. _sessions-Sessions-plugin:
 
 sessions (Sessions_)
 --------------------
@@ -3338,6 +3470,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _Sessions: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/sessions.py#L33
 
+.. _shimcachemem-ShimCacheMem-plugin:
+
 shimcachemem (ShimCacheMem_)
 ----------------------------
 Extract the Application Compatibility Shim Cache from kernel memory.
@@ -3351,6 +3485,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ShimCacheMem: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/shimcache.py#L219
+
+.. _show_allocation-ShowAllocation-plugin:
 
 show_allocation (ShowAllocation_)
 ---------------------------------
@@ -3371,6 +3507,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ShowAllocation: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/heap_analysis.py#L236
+
+.. _sockets-Sockets-plugin:
 
 sockets (Sockets_)
 ------------------
@@ -3403,6 +3541,8 @@ because Windows closes all sockets before hibernating.
 
 _ADDRESS_OBJECT are arranged in a hash table found by the _AddrObjTable
 symbol. The hash table has a size found by the _AddrObjTableSize symbol.
+
+.. _svcscan-SvcScan-plugin:
 
 svcscan (SvcScan_)
 ------------------
@@ -3454,6 +3594,8 @@ The below example shows a kernel driver being loaded as a service.
   Service State: SERVICE_RUNNING
   Binary Path: \Driver\WFPLWFS
 
+
+.. _symlinkscan-SymLinkScan-plugin:
 
 symlinkscan (SymLinkScan_)
 --------------------------
@@ -3531,6 +3673,8 @@ Here we see the **symlinkscan** plugin detecting the pmem link.
     0x00002dbdbe00      1      0 2014-01-24 21:20:05+0000 pmem \Device\pmem
     0x00002f2b7240      1      0 2014-01-24 22:07:26+0000 HCD0 \Device\USBFDO-0
 
+
+.. _thrdscan-ThrdScan-plugin:
 
 thrdscan (ThrdScan_)
 --------------------
@@ -3625,6 +3769,8 @@ what the thread is supposed to be doing.
   0x00000f413080      4   3176 0xf802d3613418 -                        -                        System           nt!MiStoreEvictThread
 
 
+.. _threads-Threads-plugin:
+
 threads (Threads_)
 ------------------
 Enumerate threads.
@@ -3677,6 +3823,8 @@ plugin.
   0xe00000137040      4     84 0xf802d314c94c System           nt!MiMappedPageWriter
   ....
 
+
+.. _timers-Timers-plugin:
 
 timers (Timers_)
 ----------------
@@ -3742,6 +3890,8 @@ correct module. Rekall will also indicate when the timer is due to go off.
   40  0xf80000e981c0 0x0000000002840a55a8 2014-01-24 21:25:21+0000          0          - 0xf80000e94c9c mup + 0x1c9c
 
 
+.. _unloaded_modules-UnloadedModules-plugin:
+
 unloaded_modules (UnloadedModules_)
 -----------------------------------
 Print a list of recently unloaded modules.
@@ -3796,6 +3946,8 @@ were used.
   CaptureFileMonitor.sys 0xb15ba000 0xb15bd000 2013-01-15 22:39:52+0000
 
 
+.. _userassist-UserAssist-plugin:
+
 userassist (UserAssist_)
 ------------------------
 Print userassist registry keys and information
@@ -3810,6 +3962,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _UserAssist: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/userassist.py#L175
+
+.. _userhandles-UserHandles-plugin:
 
 userhandles (UserHandles_)
 --------------------------
@@ -3833,6 +3987,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _UserHandles: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/userhandles.py#L49
 
+.. _users-Users-plugin:
+
 users (Users_)
 --------------
 Enumerate all users of this system.
@@ -3852,6 +4008,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Users: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/registry/printkey.py#L304
+
+.. _vad-VAD-plugin:
 
 vad (VAD_)
 ----------
@@ -3955,6 +4113,8 @@ properties.
   0xfa800207c840 4         0x7ffe0        0x7ffef   -1 Private        READONLY
   0xfa80020810b0 5         0x7fff0     0x7fffffef   -1 Private        READONLY
 
+
+.. _vaddump-VADDump-plugin:
 
 vaddump (VADDump_)
 ------------------
@@ -4094,6 +4254,8 @@ discontiguous it is best to dump it out one vad segment at a time.
   ntdll.dll!RtlRunOnceInitialize                     1151
 
 
+.. _vadmap-VADMap-plugin:
+
 vadmap (VADMap_)
 ----------------
 Inspect each page in the VAD and report its status.
@@ -4116,6 +4278,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _VADMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/vadinfo.py#L183
+
+.. _vtop-VtoP-plugin:
 
 vtop (VtoP_)
 ------------
@@ -4160,6 +4324,8 @@ address to a physical address.
   Physical Address 0x30c2d060
 
 
+.. _win32k_autodetect-Win32kAutodetect-plugin:
+
 win32k_autodetect (Win32kAutodetect_)
 -------------------------------------
 Automatically detect win32k struct layout.
@@ -4174,6 +4340,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Win32kAutodetect: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/autodetect.py#L31
+
+.. _dns_cache-WinDNSCache-plugin:
 
 dns_cache (WinDNSCache_)
 ------------------------
@@ -4192,6 +4360,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _WinDNSCache: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/dns.py#L123
 
+.. _desktops-WinDesktops-plugin:
+
 desktops (WinDesktops_)
 -----------------------
 Print information on each desktop.
@@ -4206,6 +4376,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinDesktops: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/windowstations.py#L97
+
+.. _dlllist-WinDllList-plugin:
 
 dlllist (WinDllList_)
 ---------------------
@@ -4294,6 +4466,8 @@ reveals all the 32 bit dlls loaded.
   2628     winpmem_1.5.2.       0x000074d80000 False False False \Windows\SysWOW64\msvcrt.dll
 
 
+.. _eventhooks-WinEventHooks-plugin:
+
 eventhooks (WinEventHooks_)
 ---------------------------
 Print details on windows event hooks
@@ -4312,6 +4486,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinEventHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/userhandles.py#L138
+
+.. _find_dtb-WinFindDTB-plugin:
 
 find_dtb (WinFindDTB_)
 ----------------------
@@ -4346,6 +4522,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 1. This is an internally used plugin for discovering the Directory Table Base
    (DTB) on windows systems. It is unlikely to be useful to a user by itself.
+
+.. _memdump-WinMemDump-plugin:
 
 memdump (WinMemDump_)
 ---------------------
@@ -4426,6 +4604,8 @@ dumps the kernel's address space. (You can dump all processes by providing a
   0x000000006000 0x000000001000 0x000000051000
 
 
+.. _memmap-WinMemMap-plugin:
+
 memmap (WinMemMap_)
 -------------------
 Calculates the memory regions mapped by a process.
@@ -4483,6 +4663,8 @@ physical address to a virtual address.
   0x000000051000 0x000007f49000         0x1000
 
 
+.. _messagehooks-WinMessageHooks-plugin:
+
 messagehooks (WinMessageHooks_)
 -------------------------------
 List desktop and thread window message hooks.
@@ -4497,6 +4679,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinMessageHooks: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/userhandles.py#L225
+
+.. _moddump-WinModDump-plugin:
 
 moddump (WinModDump_)
 ---------------------
@@ -4520,6 +4704,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinModDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/procdump.py#L272
+
+.. _netscan-WinNetscan-plugin:
 
 netscan (WinNetscan_)
 ---------------------
@@ -4551,6 +4737,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _WinNetscan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/netscan.py#L97
 
+.. _netstat-WinNetstat-plugin:
+
 netstat (WinNetstat_)
 ---------------------
 Enumerate image for connections and sockets
@@ -4565,6 +4753,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinNetstat: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/network.py#L34
+
+.. _pas2vas-WinPas2Vas-plugin:
 
 pas2vas (WinPas2Vas_)
 ---------------------
@@ -4671,6 +4861,8 @@ which other process has that physical page mapped.
 
 We see that `Console.exe` also maps the same dll - probably since it is also a
 Wow64 process which requires network access.
+.. _phys_map-WinPhysicalMap-plugin:
+
 phys_map (WinPhysicalMap_)
 --------------------------
 Prints the boot physical memory map.
@@ -4717,6 +4909,8 @@ it through the **MmGetPhysicalMemoryRanges()** function.
 
 
 
+.. _yarascan_physical-WinPhysicalYaraScanner-plugin:
+
 yarascan_physical (WinPhysicalYaraScanner_)
 -------------------------------------------
 An experimental yara scanner over the physical address space.
@@ -4759,6 +4953,8 @@ yara_expression                String               If provided we scan for this
 ============================== ==================== ========================================
 
 .. _WinPhysicalYaraScanner: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/yarascan.py#L185
+
+.. _pslist-WinPsList-plugin:
 
 pslist (WinPsList_)
 -------------------
@@ -4833,6 +5029,8 @@ Currently the following process listing methods are used:
   0xe000000d9280 csrss.exe               440    424      9 --------      1  False 2014-01-24 22:07:32+0000 -
 
 
+.. _rammap-WinRammap-plugin:
+
 rammap (WinRammap_)
 -------------------
 Scan all physical memory and report page owners.
@@ -4851,6 +5049,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinRammap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/pfn.py#L289
+
+.. _ssdt-WinSSDT-plugin:
 
 ssdt (WinSSDT_)
 ---------------
@@ -4926,6 +5126,8 @@ unknown module).
            0x33a 0xf96000181ca0 win32k!NtUserSetWindowLongPtr
 
 
+.. _sigscan-WinSigScan-plugin:
+
 sigscan (WinSigScan_)
 ---------------------
 Runs a signature scans against physical, kernel or process memory.
@@ -4944,6 +5146,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WinSigScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/sigscan.py#L23
+
+.. _virt_map-WinVirtualMap-plugin:
 
 virt_map (WinVirtualMap_)
 -------------------------
@@ -5001,6 +5205,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _WinVirtualMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/misc.py#L66
 
+.. _yarascan-WinYaraScan-plugin:
+
 yarascan (WinYaraScan_)
 -----------------------
 Scan using yara signatures.
@@ -5040,6 +5246,8 @@ yara_file                      String               The yara signature file to r
 
 .. _WinYaraScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/yarascan.py#L36
 
+.. _address_resolver-WindowsAddressResolver-plugin:
+
 address_resolver (WindowsAddressResolver_)
 ------------------------------------------
 A windows specific address resolver plugin.
@@ -5055,6 +5263,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WindowsAddressResolver: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/address_resolver.py#L247
+
+.. _psxview-WindowsPsxView-plugin:
 
 psxview (WindowsPsxView_)
 -------------------------
@@ -5075,6 +5285,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _WindowsPsxView: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/malware/psxview.py#L26
 
+.. _cc-WindowsSetProcessContext-plugin:
+
 cc (WindowsSetProcessContext_)
 ------------------------------
 A cc plugin for windows.
@@ -5094,6 +5306,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _WindowsSetProcessContext: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/misc.py#L61
 
+.. _windows_stations-WindowsStations-plugin:
+
 windows_stations (WindowsStations_)
 -----------------------------------
 Displays all the windows stations by following lists.
@@ -5108,6 +5322,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _WindowsStations: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/gui/windowstations.py#L48
+
+.. _times-WindowsTimes-plugin:
 
 times (WindowsTimes_)
 ---------------------
@@ -5126,6 +5342,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 Linux
 _____
+
+.. _arp-Arp-plugin:
 
 arp (Arp_)
 ----------
@@ -5163,6 +5381,8 @@ show the entries.
 
 
 
+.. _banner-Banner-plugin:
+
 banner (Banner_)
 ----------------
 Prints the Linux banner information.
@@ -5192,6 +5412,8 @@ verbosity                      IntParser            An integer reflecting the am
   Linux version 3.11.0-12-generic (buildd@allspice) (gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu7) ) #19-Ubuntu SMP Wed Oct 9 16:20:46 UTC 2013 (Ubuntu 3.11.0-12.19-generic 3.11.3)
 
 
+
+.. _bash-BashHistory-plugin:
 
 bash (BashHistory_)
 -------------------
@@ -5240,6 +5462,8 @@ process, grouped by pid.
     1335 bash                 2014-03-04 17:16:31+0000 uname -a
 
 
+
+.. _check_afinfo-CheckAFInfo-plugin:
 
 check_afinfo (CheckAFInfo_)
 ---------------------------
@@ -5292,6 +5516,8 @@ these functions, the Module column will appear as Unknown.
   udp4_seq_afinfo                seq_fops.release               0xffff812157d0 Kernel
 
 
+
+.. _check_creds-CheckCreds-plugin:
 
 check_creds (CheckCreds_)
 -------------------------
@@ -5355,6 +5581,8 @@ same `cred` address.
   0x88003cbc1440 1199     libvirtd
 
 
+
+.. _check_idt-CheckIdt-plugin:
 
 check_idt (CheckIdt_)
 ---------------------
@@ -5657,6 +5885,8 @@ The plugin provides 6 columns as output:
 
 
 
+.. _check_modules-CheckModules-plugin:
+
 check_modules (CheckModules_)
 -----------------------------
 Compares module list to sysfs info, if available.
@@ -5684,6 +5914,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _CheckModules: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/check_modules.py#L32
+
+.. _check_proc_fops-CheckProcFops-plugin:
 
 check_proc_fops (CheckProcFops_)
 --------------------------------
@@ -5730,6 +5962,8 @@ Expect blank output on clean systems.
 
 
 
+.. _check_syscall-CheckSyscall-plugin:
+
 check_syscall (CheckSyscall_)
 -----------------------------
 Checks if the system call table has been altered.
@@ -5764,6 +5998,8 @@ along with the profile and if this handler is changed, Rekall will detect it.
 
 
 
+.. _check_ttys-CheckTTY-plugin:
+
 check_ttys (CheckTTY_)
 ----------------------
 Checks tty devices for hooks.
@@ -5781,6 +6017,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _CheckTTY: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/check_tty.py#L30
+
+.. _check_task_fops-CheckTaskFops-plugin:
 
 check_task_fops (CheckTaskFops_)
 --------------------------------
@@ -5832,6 +6070,8 @@ Expect blank output on clean systems.
 
 
 
+.. _cpuinfo-CpuInfo-plugin:
+
 cpuinfo (CpuInfo_)
 ------------------
 Prints information about each active processor.
@@ -5864,6 +6104,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _heapdump-HeapChunkDumper-plugin:
+
 heapdump (HeapChunkDumper_)
 ---------------------------
 Dumps allocated/freed chunks from selected processes
@@ -5890,6 +6132,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _HeapChunkDumper: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/heap_analysis.py#L3337
+
+.. _heapobjects-HeapObjects-plugin:
 
 heapobjects (HeapObjects_)
 --------------------------
@@ -5922,6 +6166,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _HeapObjects: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/heap_analysis.py#L3186
 
+.. _heapinfo-HeapOverview-plugin:
+
 heapinfo (HeapOverview_)
 ------------------------
 Tries to gather a list of all arenas/heaps and all allocated chunks.
@@ -5947,6 +6193,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _HeapOverview: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/heap_analysis.py#L3126
+
+.. _heapsearch-HeapPointerSearch-plugin:
 
 heapsearch (HeapPointerSearch_)
 -------------------------------
@@ -5991,6 +6239,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _HeapPointerSearch: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/heap_analysis.py#L3459
 
+.. _heaprefs-HeapReferenceSearch-plugin:
+
 heaprefs (HeapReferenceSearch_)
 -------------------------------
 Examines the data part of the given chunk for references to other
@@ -6020,6 +6270,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _HeapReferenceSearch: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/heap_analysis.py#L3649
 
+.. _hostname-Hostname-plugin:
+
 hostname (Hostname_)
 --------------------
 A mixin for those plugins requiring a physical address space.
@@ -6042,6 +6294,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Hostname: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/common.py#L362
+
+.. _iomem-IOmem-plugin:
 
 iomem (IOmem_)
 --------------
@@ -6105,6 +6359,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _ifconfig-Ifconfig-plugin:
+
 ifconfig (Ifconfig_)
 --------------------
 Gathers active interfaces.
@@ -6135,6 +6391,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _keepassx-Keepassx-plugin:
+
 keepassx (Keepassx_)
 --------------------
 Gathers password entries for keepassx.
@@ -6162,6 +6420,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _Keepassx: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/keepassx.py#L38
 
+.. _memdump-LinMemDump-plugin:
+
 memdump (LinMemDump_)
 ---------------------
 Dump the addressable memory for a process.
@@ -6183,6 +6443,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinMemDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pslist.py#L78
 
+.. _memmap-LinMemMap-plugin:
+
 memmap (LinMemMap_)
 -------------------
 Dumps the memory map for linux tasks.
@@ -6203,6 +6465,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinMemMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pslist.py#L73
 
+.. _moddump-LinModdump-plugin:
+
 moddump (LinModdump_)
 ---------------------
 Dumps loaded kernel modules.
@@ -6220,6 +6484,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinModdump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/lsmod.py#L182
 
+.. _pstree-LinPSTree-plugin:
+
 pstree (LinPSTree_)
 -------------------
 Shows the parent/child relationship between processes.
@@ -6236,6 +6502,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinPSTree: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pstree.py#L30
+
+.. _pas2vas-LinPas2Vas-plugin:
 
 pas2vas (LinPas2Vas_)
 ---------------------
@@ -6258,6 +6526,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinPas2Vas: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pas2kas.py#L26
 
+.. _vaddump-LinVadDump-plugin:
+
 vaddump (LinVadDump_)
 ---------------------
 Dump the VMA memory for a process.
@@ -6279,6 +6549,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinVadDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/proc_maps.py#L96
 
+.. _vtop-LinVtoP-plugin:
+
 vtop (LinVtoP_)
 ---------------
 Describe virtual to physical translation on Linux platforms.
@@ -6298,6 +6570,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinVtoP: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/misc.py#L33
+
+.. _yarascan-LinYaraScan-plugin:
 
 yarascan (LinYaraScan_)
 -----------------------
@@ -6332,6 +6606,8 @@ yara_file                      String               The yara signature file to r
 
 .. _LinYaraScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/yarascan.py#L26
 
+.. _address_resolver-LinuxAddressResolver-plugin:
+
 address_resolver (LinuxAddressResolver_)
 ----------------------------------------
 A Linux specific address resolver plugin.
@@ -6347,6 +6623,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxAddressResolver: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/address_resolver.py#L61
+
+.. _dmesg-LinuxDmesg-plugin:
 
 dmesg (LinuxDmesg_)
 -------------------
@@ -6405,6 +6683,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _find_dtb-LinuxFindDTB-plugin:
+
 find_dtb (LinuxFindDTB_)
 ------------------------
 A scanner for DTB values. Handles both 32 and 64 bits.
@@ -6420,6 +6700,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxFindDTB: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/common.py#L153
+
+.. _pslist-LinuxPsList-plugin:
 
 pslist (LinuxPsList_)
 ---------------------
@@ -6443,6 +6725,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinuxPsList: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pslist.py#L32
 
+.. _psxview-LinuxPsxView-plugin:
+
 psxview (LinuxPsxView_)
 -----------------------
 Find hidden processes comparing various process listings.
@@ -6461,6 +6745,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxPsxView: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/psxview.py#L27
+
+.. _cc-LinuxSetProcessContext-plugin:
 
 cc (LinuxSetProcessContext_)
 ----------------------------
@@ -6482,6 +6768,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LinuxSetProcessContext: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/misc.py#L28
 
+.. _sigscan-LinuxSigScan-plugin:
+
 sigscan (LinuxSigScan_)
 -----------------------
 Runs a signature scans against physical, kernel or process memory.
@@ -6501,6 +6789,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxSigScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/sigscan.py#L23
+
+.. _vadmap-LinuxVADMap-plugin:
 
 vadmap (LinuxVADMap_)
 ---------------------
@@ -6525,6 +6815,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxVADMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/proc_maps.py#L138
+
+.. _lsmod-Lsmod-plugin:
 
 lsmod (Lsmod_)
 --------------
@@ -6559,6 +6851,8 @@ Rekall walks the list at kernel symbol `modules` to provide the list of modules.
 
 
 
+.. _lsmod_sections-LsmodSections-plugin:
+
 lsmod_sections (LsmodSections_)
 -------------------------------
 Display all the ELF sections of kernel modules.
@@ -6574,6 +6868,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _LsmodSections: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/lsmod.py#L58
 
+.. _lsmod_parameters-Lsmod_parameters-plugin:
+
 lsmod_parameters (Lsmod_parameters_)
 ------------------------------------
 Display parameters for all kernel modules.
@@ -6588,6 +6884,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Lsmod_parameters: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/lsmod.py#L82
+
+.. _lsof-Lsof-plugin:
 
 lsof (Lsof_)
 ------------
@@ -6633,6 +6931,8 @@ kernel task.
 
 
 
+.. _mcat-Mcat-plugin:
+
 mcat (Mcat_)
 ------------
 Returns the contents available in memory for a given file.
@@ -6654,6 +6954,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 You can find the list of files in memory by using the `mls` plugin.
+
+.. _mfind-Mfind-plugin:
 
 mfind (Mfind_)
 --------------
@@ -6703,6 +7005,8 @@ You can use the `--device` parameter to filter out by device name if you want to
 
 
 
+
+.. _mls-Mls-plugin:
 
 mls (Mls_)
 ----------
@@ -6907,6 +7211,8 @@ Note that sometimes you may have to specify the right device in order to only ge
 
 
 
+.. _mount-Mount-plugin:
+
 mount (Mount_)
 --------------
 Lists the mount points.
@@ -6944,6 +7250,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _netstat-Netstat-plugin:
+
 netstat (Netstat_)
 ------------------
 Print the active network connections.
@@ -6958,6 +7266,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Netstat: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/netstat.py#L27
+
+.. _notifier_chains-NotifierChainPlugin-plugin:
 
 notifier_chains (NotifierChainPlugin_)
 --------------------------------------
@@ -6994,6 +7304,8 @@ Normally, no callbacks will be registered in any of these notifier chains and Re
 
 
 
+.. _psaux-PSAux-plugin:
+
 psaux (PSAux_)
 --------------
 Gathers processes along with full command line and start time.
@@ -7014,6 +7326,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _PSAux: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/psaux.py#L30
 
+.. _pkt_queues-PacketQueues-plugin:
+
 pkt_queues (PacketQueues_)
 --------------------------
 Dumps the current packet queues for all known open sockets.
@@ -7028,6 +7342,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _PacketQueues: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/netstat.py#L120
+
+.. _pidhashtable-PidHashTable-plugin:
 
 pidhashtable (PidHashTable_)
 ----------------------------
@@ -7048,6 +7364,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _PidHashTable: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/pslist.py#L99
+
+.. _maps-ProcMaps-plugin:
 
 maps (ProcMaps_)
 ----------------
@@ -7109,6 +7427,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 
 
+.. _zsh-Zsh-plugin:
+
 zsh (Zsh_)
 ----------
 Extracts the zsh command history, similar to the existing bash plugin.
@@ -7138,6 +7458,8 @@ verbosity                      IntParser            An integer reflecting the am
 OSX
 ___
 
+.. _check_trap_table-CheckTrapTable-plugin:
+
 check_trap_table (CheckTrapTable_)
 ----------------------------------
 Checks the traps table for hooks.
@@ -7152,6 +7474,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _CheckTrapTable: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/checks.py#L259
+
+.. _address_resolver-DarwinAddressResolver-plugin:
 
 address_resolver (DarwinAddressResolver_)
 -----------------------------------------
@@ -7168,6 +7492,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinAddressResolver: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/address_resolver.py#L52
+
+.. _allproc-DarwinAllProcCollector-plugin:
 
 allproc (DarwinAllProcCollector_)
 ---------------------------------
@@ -7186,6 +7512,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinAllProcCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L363
 
+.. _arp-DarwinArp-plugin:
+
 arp (DarwinArp_)
 ----------------
 Show information about arp tables.
@@ -7200,6 +7528,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinArp: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L204
+
+.. _boot_cmdline-DarwinBootParameters-plugin:
 
 boot_cmdline (DarwinBootParameters_)
 ------------------------------------
@@ -7216,6 +7546,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinBootParameters: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L190
 
+.. _check_syscalls-DarwinCheckSysCalls-plugin:
+
 check_syscalls (DarwinCheckSysCalls_)
 -------------------------------------
 Checks the syscall table.
@@ -7231,6 +7563,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinCheckSysCalls: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/checks.py#L76
 
+.. _dmesg-DarwinDMSG-plugin:
+
 dmesg (DarwinDMSG_)
 -------------------
 Print the kernel debug messages.
@@ -7245,6 +7579,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinDMSG: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L35
+
+.. _dead_fileprocs-DarwinDeadFileprocCollector-plugin:
 
 dead_fileprocs (DarwinDeadFileprocCollector_)
 ---------------------------------------------
@@ -7263,6 +7599,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinDeadFileprocCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L201
 
+.. _dead_procs-DarwinDeadProcessCollector-plugin:
+
 dead_procs (DarwinDeadProcessCollector_)
 ----------------------------------------
 Lists dead processes using the proc allocation zone.
@@ -7277,6 +7615,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinDeadProcessCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L186
+
+.. _dumpcompressedmemory-DarwinDumpCompressedPages-plugin:
 
 dumpcompressedmemory (DarwinDumpCompressedPages_)
 -------------------------------------------------
@@ -7294,6 +7634,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinDumpCompressedPages: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/compressor.py#L33
 
+.. _dump_zone-DarwinDumpZone-plugin:
+
 dump_zone (DarwinDumpZone_)
 ---------------------------
 Dumps an allocation zone's contents.
@@ -7309,6 +7651,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinDumpZone: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L81
 
+.. _find_dtb-DarwinFindDTB-plugin:
+
 find_dtb (DarwinFindDTB_)
 -------------------------
 Tries to find the DTB address for the Darwin/XNU kernel.
@@ -7320,6 +7664,8 @@ job, based on the profile. It will also attempt to fall back on less ideal
 ways of getting the DTB if the best way fails.
 
 .. _DarwinFindDTB: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/common.py#L300
+
+.. _find_kaslr-DarwinFindKASLR-plugin:
 
 find_kaslr (DarwinFindKASLR_)
 -----------------------------
@@ -7335,6 +7681,8 @@ Human-readable output includes values of the kernel version string (which is
 used for validation) for manual review, in case there are false positives.
 
 .. _DarwinFindKASLR: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/common.py#L181
+
+.. _handles-DarwinHandles-plugin:
 
 handles (DarwinHandles_)
 ------------------------
@@ -7356,6 +7704,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinHandles: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/lsof.py#L25
 
+.. _ip_filters-DarwinIPFilters-plugin:
+
 ip_filters (DarwinIPFilters_)
 -----------------------------
 Check IP Filters for hooks.
@@ -7370,6 +7720,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinIPFilters: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L379
+
+.. _ifconfig-DarwinIfnetCollector-plugin:
 
 ifconfig (DarwinIfnetCollector_)
 --------------------------------
@@ -7388,6 +7740,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinIfnetCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L374
 
+.. _lsmod-DarwinLsmod-plugin:
+
 lsmod (DarwinLsmod_)
 --------------------
 Lists all kernel modules.
@@ -7402,6 +7756,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinLsmod: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/lsmod.py#L25
+
+.. _lsof-DarwinLsof-plugin:
 
 lsof (DarwinLsof_)
 ------------------
@@ -7422,6 +7778,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinLsof: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/lsof.py#L41
 
+.. _machine_info-DarwinMachineInfo-plugin:
+
 machine_info (DarwinMachineInfo_)
 ---------------------------------
 Show information about this machine.
@@ -7436,6 +7794,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinMachineInfo: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L65
+
+.. _maps-DarwinMaps-plugin:
 
 maps (DarwinMaps_)
 ------------------
@@ -7454,6 +7814,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinMaps: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L111
+
+.. _memdump-DarwinMemDump-plugin:
 
 memdump (DarwinMemDump_)
 ------------------------
@@ -7474,6 +7836,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinMemDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L214
 
+.. _memmap-DarwinMemMap-plugin:
+
 memmap (DarwinMemMap_)
 ----------------------
 Prints the memory map for darwin tasks.
@@ -7492,6 +7856,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinMemMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L205
 
+.. _mount-DarwinMount-plugin:
+
 mount (DarwinMount_)
 --------------------
 Show mount points.
@@ -7506,6 +7872,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinMount: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L81
+
+.. _netstat-DarwinNetstat-plugin:
 
 netstat (DarwinNetstat_)
 ------------------------
@@ -7532,6 +7900,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinNetstat: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L59
 
+.. _notifiers-DarwinNotifiers-plugin:
+
 notifiers (DarwinNotifiers_)
 ----------------------------
 Detects hooks in I/O Kit IONotify objects.
@@ -7546,6 +7916,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinNotifiers: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/hooks.py#L24
+
+.. _psaux-DarwinPSAUX-plugin:
 
 psaux (DarwinPSAUX_)
 --------------------
@@ -7564,6 +7936,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinPSAUX: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L181
+
+.. _pas2vas-DarwinPas2Vas-plugin:
 
 pas2vas (DarwinPas2Vas_)
 ------------------------
@@ -7584,6 +7958,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinPas2Vas: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/pas2kas.py#L29
 
+.. _pgrphash-DarwinPgrpHashCollector-plugin:
+
 pgrphash (DarwinPgrpHashCollector_)
 -----------------------------------
 A mixin for plugins which require a valid kernel address space.
@@ -7601,6 +7977,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinPgrpHashCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L353
 
+.. _phys_map-DarwinPhysicalMap-plugin:
+
 phys_map (DarwinPhysicalMap_)
 -----------------------------
 Prints the EFI boot physical memory map.
@@ -7615,6 +7993,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinPhysicalMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L101
+
+.. _pidhash-DarwinPidHashProcessCollector-plugin:
 
 pidhash (DarwinPidHashProcessCollector_)
 ----------------------------------------
@@ -7633,6 +8013,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinPidHashProcessCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L368
 
+.. _pstree-DarwinPsTree-plugin:
+
 pstree (DarwinPsTree_)
 ----------------------
 A mixin for plugins which require a valid kernel address space.
@@ -7649,6 +8031,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinPsTree: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L85
+
+.. _pslist-DarwinPslist-plugin:
 
 pslist (DarwinPslist_)
 ----------------------
@@ -7670,6 +8054,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinPslist: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L33
 
+.. _psxview-DarwinPsxView-plugin:
+
 psxview (DarwinPsxView_)
 ------------------------
 A mixin for plugins which require a valid kernel address space.
@@ -7690,6 +8076,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinPsxView: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L60
 
+.. _route-DarwinRoute-plugin:
+
 route (DarwinRoute_)
 --------------------
 Show routing table.
@@ -7704,6 +8092,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinRoute: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L232
+
+.. _dead_sessions-DarwinSessionZoneCollector-plugin:
 
 dead_sessions (DarwinSessionZoneCollector_)
 -------------------------------------------
@@ -7722,6 +8112,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinSessionZoneCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L156
 
+.. _sessions-DarwinSessions-plugin:
+
 sessions (DarwinSessions_)
 --------------------------
 Finds sessions by walking their global hashtable.
@@ -7736,6 +8128,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinSessions: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/sessions.py#L30
+
+.. _cc-DarwinSetProcessContext-plugin:
 
 cc (DarwinSetProcessContext_)
 -----------------------------
@@ -7755,6 +8149,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinSetProcessContext: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L206
 
+.. _sigscan-DarwinSigScan-plugin:
+
 sigscan (DarwinSigScan_)
 ------------------------
 Runs a signature scans against physical, kernel or process memory.
@@ -7773,6 +8169,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinSigScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/sigscan.py#L25
 
+.. _dead_sockets-DarwinSocketZoneCollector-plugin:
+
 dead_sockets (DarwinSocketZoneCollector_)
 -----------------------------------------
 A mixin for plugins which require a valid kernel address space.
@@ -7790,6 +8188,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinSocketZoneCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L128
 
+.. _open_sockets-DarwinSocketsFromHandles-plugin:
+
 open_sockets (DarwinSocketsFromHandles_)
 ----------------------------------------
 Looks up handles that point to a socket and collects the socket.
@@ -7804,6 +8204,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinSocketsFromHandles: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L47
+
+.. _sysctl-DarwinSysctl-plugin:
 
 sysctl (DarwinSysctl_)
 ----------------------
@@ -7840,6 +8242,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinSysctl: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/checks.py#L172
 
+.. _dead_ttys-DarwinTTYZoneCollector-plugin:
+
 dead_ttys (DarwinTTYZoneCollector_)
 -----------------------------------
 A mixin for plugins which require a valid kernel address space.
@@ -7856,6 +8260,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinTTYZoneCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L142
+
+.. _tasks-DarwinTaskProcessCollector-plugin:
 
 tasks (DarwinTaskProcessCollector_)
 -----------------------------------
@@ -7874,6 +8280,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinTaskProcessCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L358
 
+.. _terminals-DarwinTerminals-plugin:
+
 terminals (DarwinTerminals_)
 ----------------------------
 Lists open ttys.
@@ -7889,6 +8297,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinTerminals: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/sessions.py#L56
 
+.. _unp_sockets-DarwinUnpListCollector-plugin:
+
 unp_sockets (DarwinUnpListCollector_)
 -------------------------------------
 Walks the global list of sockets in uipc_usrreq.
@@ -7903,6 +8313,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinUnpListCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/networking.py#L31
+
+.. _vadmap-DarwinVADMap-plugin:
 
 vadmap (DarwinVADMap_)
 ----------------------
@@ -7926,6 +8338,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinVADMap: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/maps.py#L27
 
+.. _vaddump-DarwinVadDump-plugin:
+
 vaddump (DarwinVadDump_)
 ------------------------
 Dump the VMA memory for a process.
@@ -7945,6 +8359,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _DarwinVadDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/processes.py#L149
 
+.. _vtop-DarwinVtoP-plugin:
+
 vtop (DarwinVtoP_)
 ------------------
 Describe virtual to physical translation on darwin platforms.
@@ -7962,6 +8378,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinVtoP: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/misc.py#L212
+
+.. _yarascan-DarwinYaraScan-plugin:
 
 yarascan (DarwinYaraScan_)
 --------------------------
@@ -7994,6 +8412,8 @@ yara_file                      String               The yara signature file to r
 
 .. _DarwinYaraScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/yarascan.py#L6
 
+.. _zones-DarwinZoneCollector-plugin:
+
 zones (DarwinZoneCollector_)
 ----------------------------
 A mixin for plugins which require a valid kernel address space.
@@ -8010,6 +8430,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _DarwinZoneCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/darwin/zones.py#L45
+
+.. _dead_vnodes-DarwinZoneVnodeCollector-plugin:
 
 dead_vnodes (DarwinZoneVnodeCollector_)
 ---------------------------------------
@@ -8033,6 +8455,8 @@ Live
 
 General
 _______
+
+.. _file_yara-FileYaraScanner-plugin:
 
 file_yara (FileYaraScanner_)
 ----------------------------
@@ -8058,6 +8482,8 @@ yara_file                      String               The yara signature file to r
 
 .. _FileYaraScanner: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/yarascan.py#L30
 
+.. _hexdump_file-IRDump-plugin:
+
 hexdump_file (IRDump_)
 ----------------------
 Hexdump files from disk.
@@ -8082,6 +8508,8 @@ width                          IntParser            Number of bytes per row
 
 .. _IRDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/files.py#L467
 
+.. _find-IRFind-plugin:
+
 find (IRFind_)
 --------------
 List files recursively from a root path.
@@ -8096,6 +8524,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _IRFind: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/files.py#L46
+
+.. _glob-IRGlob-plugin:
 
 glob (IRGlob_)
 --------------
@@ -8118,6 +8548,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _IRGlob: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/files.py#L255
 
+.. _hash-IRHash-plugin:
+
 hash (IRHash_)
 --------------
 
@@ -8134,6 +8566,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _IRHash: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/files.py#L104
 
+.. _stat-IRStat-plugin:
+
 stat (IRStat_)
 --------------
 
@@ -8148,6 +8582,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _IRStat: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/files.py#L72
+
+.. _osquery-OSQuery-plugin:
 
 osquery (OSQuery_)
 ------------------
@@ -8168,6 +8604,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _OSQuery: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/osquery.py#L45
 
+.. _system_info-SystemInfo-plugin:
+
 system_info (SystemInfo_)
 -------------------------
 Just emit information about the agent.
@@ -8187,6 +8625,8 @@ verbosity                      IntParser            An integer reflecting the am
 API
 ___
 
+.. _lsof-APILsof-plugin:
+
 lsof (APILsof_)
 ---------------
 A plugin which lists all open files.
@@ -8202,6 +8642,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _APILsof: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/processes.py#L159
+
+.. _pslist-APIPslist-plugin:
 
 pslist (APIPslist_)
 -------------------
@@ -8219,6 +8661,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _APIPslist: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/processes.py#L193
 
+.. _cc-APISetProcessContext-plugin:
+
 cc (APISetProcessContext_)
 --------------------------
 A cc plugin for setting process context to live mode.
@@ -8234,6 +8678,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _APISetProcessContext: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/processes.py#L235
+
+.. _maps-IRMaps-plugin:
 
 maps (IRMaps_)
 --------------
@@ -8254,6 +8700,8 @@ verbosity                      IntParser            With high verbosity print mo
 ============================== ==================== ========================================
 
 .. _IRMaps: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/linux.py#L27
+
+.. _vaddump-IRVadDump-plugin:
 
 vaddump (IRVadDump_)
 --------------------
@@ -8276,6 +8724,8 @@ verbosity                      IntParser            With high verbosity print mo
 
 .. _IRVadDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/linux.py#L127
 
+.. _address_resolver-LinuxAPIAddressResolver-plugin:
+
 address_resolver (LinuxAPIAddressResolver_)
 -------------------------------------------
 A Linux specific address resolver plugin.
@@ -8290,6 +8740,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _LinuxAPIAddressResolver: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/linux.py#L221
+
+.. _yarascan-ProcessYaraScanner-plugin:
 
 yarascan (ProcessYaraScanner_)
 ------------------------------
@@ -8322,6 +8774,8 @@ Filesystem
 NTFS
 ____
 
+.. _fls-FLS-plugin:
+
 fls (FLS_)
 ----------
 
@@ -8337,6 +8791,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _FLS: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/ntfs.py#L1189
 
+.. _fstat-FStat-plugin:
+
 fstat (FStat_)
 --------------
 Print information by filename.
@@ -8351,6 +8807,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _FStat: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/ntfs.py#L1059
+
+.. _idump-IDump-plugin:
 
 idump (IDump_)
 --------------
@@ -8368,6 +8826,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _IDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/ntfs.py#L1229
+
+.. _iexport-IExport-plugin:
 
 iexport (IExport_)
 ------------------
@@ -8389,6 +8849,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _IExport: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/ntfs.py#L1263
 
+.. _ils-ILS-plugin:
+
 ils (ILS_)
 ----------
 List files in an NTFS image.
@@ -8403,6 +8865,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ILS: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/ntfs.py#L1194
+
+.. _istat-IStat-plugin:
 
 istat (IStat_)
 --------------
@@ -8424,6 +8888,8 @@ General
 
 Utilities
 _________
+
+.. _aff4acquire-AFF4Acquire-plugin:
 
 aff4acquire (AFF4Acquire_)
 --------------------------
@@ -8462,6 +8928,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _AFF4Acquire: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/aff4acquire.py#L208
 
+.. _aff4dump-AFF4Dump-plugin:
+
 aff4dump (AFF4Dump_)
 --------------------
 Dump the entire resolver contents for an AFF4 volume.
@@ -8484,6 +8952,8 @@ volume                         String               Volume to list.
 
 .. _AFF4Dump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/aff4acquire.py#L837
 
+.. _aff4export-AFF4Export-plugin:
+
 aff4export (AFF4Export_)
 ------------------------
 Exports all the streams in an AFF4 Volume.
@@ -8504,6 +8974,8 @@ volume                         String               Volume to list.
 ============================== ==================== ========================================
 
 .. _AFF4Export: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/aff4acquire.py#L867
+
+.. _aff4ls-AFF4Ls-plugin:
 
 aff4ls (AFF4Ls_)
 ----------------
@@ -8527,6 +8999,8 @@ volume                         String               Volume to list.
 
 .. _AFF4Ls: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/aff4acquire.py#L727
 
+.. _api-APIGenerator-plugin:
+
 api (APIGenerator_)
 -------------------
 Generate the plugin API document.
@@ -8543,6 +9017,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _APIGenerator: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/api.py#L37
 
+.. _session_api-APISessionGenerator-plugin:
+
 session_api (APISessionGenerator_)
 ----------------------------------
 
@@ -8558,6 +9034,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _APISessionGenerator: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/api.py#L154
+
+.. _artifact_collector-ArtifactsCollector-plugin:
 
 artifact_collector (ArtifactsCollector_)
 ----------------------------------------
@@ -8582,6 +9060,8 @@ writer                         Choices              Writer for artifact results.
 
 .. _ArtifactsCollector: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/forensic_artifacts.py#L799
 
+.. _artifact_list-ArtifactsList-plugin:
+
 artifact_list (ArtifactsList_)
 ------------------------------
 List details about all known artifacts.
@@ -8602,6 +9082,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _ArtifactsList: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/forensic_artifacts.py#L990
 
+.. _artifact_view-ArtifactsView-plugin:
+
 artifact_view (ArtifactsView_)
 ------------------------------
 
@@ -8616,6 +9098,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ArtifactsView: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/response/forensic_artifacts.py#L967
+
+.. _build_index-BuildIndex-plugin:
 
 build_index (BuildIndex_)
 -------------------------
@@ -8695,6 +9179,8 @@ For example:
 
 
 
+.. _build_local_profile-BuildProfileLocally-plugin:
+
 build_local_profile (BuildProfileLocally_)
 ------------------------------------------
 Download and builds a profile locally in one step.
@@ -8704,6 +9190,8 @@ be writable. Usually this is a caching repository so the profile goes in the
 local cache.
 
 .. _BuildProfileLocally: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/profile_tool.py#L1148
+
+.. _simple_certdump-CertDump-plugin:
 
 simple_certdump (CertDump_)
 ---------------------------
@@ -8719,6 +9207,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _CertDump: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/dumpcerts.py#L134
+
+.. _simple_certscan-CertScan-plugin:
 
 simple_certscan (CertScan_)
 ---------------------------
@@ -8759,6 +9249,8 @@ also dumped to files in the specified directory.
   0x000000171b46 X509       1653       /C=US/ST=Washington/L=Redmond/O=Microsoft Corporation/CN=Microsoft Time-Stamp PCA 2010
 
 
+.. _collect-Collect-plugin:
+
 collect (Collect_)
 ------------------
 Collect instances of struct of type 'type_name'.
@@ -8776,6 +9268,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Collect: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/efilter_plugins/collection.py#L102
+
+.. _convert_profile-ConvertProfile-plugin:
 
 convert_profile (ConvertProfile_)
 ---------------------------------
@@ -8845,6 +9339,8 @@ for live analysis:
        0x8804285f3000 ksoftirqd/0               3      2      0      0 -                  2016-01-29 12:50:31Z -
 
 
+
+.. _dt-DT-plugin:
 
 dt (DT_)
 --------
@@ -8931,6 +9427,8 @@ operating systems.
 
 
 
+.. _describe-Describe-plugin:
+
 describe (Describe_)
 --------------------
 Describe the output of a plugin.
@@ -8947,6 +9445,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Describe: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/efilter_plugins/info.py#L28
+
+.. _dis-Disassemble-plugin:
 
 dis (Disassemble_)
 ------------------
@@ -9047,6 +9547,8 @@ internally called functions.
 
 
 
+.. _dump-Dump-plugin:
+
 dump (Dump_)
 ------------
 Hexdump an object or memory location.
@@ -9112,6 +9614,8 @@ kernel. Also shown are other symbols located in the vicinity.
 
 
 
+.. _dwarfparser-DwarfParser-plugin:
+
 dwarfparser (DwarfParser_)
 --------------------------
 Parse the dwarf file and dump a vtype structure from it.
@@ -9131,6 +9635,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 This plugin is mostly used by the convert_profile plugin.
 
+.. _elf_sections-ELFSections-plugin:
+
 elf_sections (ELFSections_)
 ---------------------------
 
@@ -9146,6 +9652,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ELFSections: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/elf.py#L36
+
+.. _elf_versions_needed-ELFVerNeeded-plugin:
 
 elf_versions_needed (ELFVerNeeded_)
 -----------------------------------
@@ -9163,6 +9671,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _ELFVerNeeded: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/elf.py#L58
 
+.. _elf_versions_symbols-ELFVerSymbols-plugin:
+
 elf_versions_symbols (ELFVerSymbols_)
 -------------------------------------
 
@@ -9178,6 +9688,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _ELFVerSymbols: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/linux/elf.py#L80
+
+.. _ewfacquire-EWFAcquire-plugin:
 
 ewfacquire (EWFAcquire_)
 ------------------------
@@ -9216,6 +9728,8 @@ multiple streams and can also keep important metadata.
    Writing 352Mb
 
 
+
+.. _fetch_pdb-FetchPDB-plugin:
 
 fetch_pdb (FetchPDB_)
 ---------------------
@@ -9281,6 +9795,8 @@ the image, then use the `fetch_pdb` plugin to fetch it. Note that PDB files are 
 
 
 
+.. _which_plugin-FindPlugins-plugin:
+
 which_plugin (FindPlugins_)
 ---------------------------
 Find which plugin(s) are available to produce the desired output.
@@ -9300,6 +9816,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _FindPlugins: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/efilter_plugins/collection.py#L45
+
+.. _grep-Grep-plugin:
 
 grep (Grep_)
 ------------
@@ -9393,6 +9911,8 @@ the _EPROCESS address.
 
 
 
+.. _imagecopy-ImageCopy-plugin:
+
 imagecopy (ImageCopy_)
 ----------------------
 Copies a physical address space out as a raw DD image
@@ -9441,6 +9961,8 @@ it:
 
 
 
+.. _info-Info-plugin:
+
 info (Info_)
 ------------
 Print information about various subsystems.
@@ -9448,12 +9970,16 @@ Print information about various subsystems.
 
 .. _Info: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/core.py#L49
 
+.. _shell-InteractiveShell-plugin:
+
 shell (InteractiveShell_)
 -------------------------
 An interactive shell for Rekall.
 
 
 .. _InteractiveShell: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/ipython.py#L195
+
+.. _json_render-JSONParser-plugin:
 
 json_render (JSONParser_)
 -------------------------
@@ -9478,6 +10004,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _JSONParser: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/json_tools.py#L41
+
+.. _l-Lister-plugin:
 
 l (Lister_)
 -----------
@@ -9511,6 +10039,8 @@ list of processes (this is one of the `pslist` methods).
 
 
 
+.. _live-Live-plugin:
+
 live (Live_)
 ------------
 Launch a Rekall shell for live analysis on the current system.
@@ -9526,12 +10056,16 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _Live: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/live_linux.py#L42
 
+.. _load_as-LoadAddressSpace-plugin:
+
 load_as (LoadAddressSpace_)
 ---------------------------
 Load address spaces into the session if its not already loaded.
 
 
 .. _LoadAddressSpace: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/core.py#L294
+
+.. _load_plugin-LoadPlugins-plugin:
 
 load_plugin (LoadPlugins_)
 --------------------------
@@ -9541,6 +10075,8 @@ This probably is only useful after the interactive shell started since you
 can already use the --plugin command line option.
 
 .. _LoadPlugins: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/core.py#L605
+
+.. _lookup-Lookup-plugin:
 
 lookup (Lookup_)
 ----------------
@@ -9560,6 +10096,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _Lookup: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/efilter_plugins/search.py#L71
+
+.. _manage_repo-ManageRepository-plugin:
 
 manage_repo (ManageRepository_)
 -------------------------------
@@ -9582,6 +10120,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _ManageRepository: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/repository_manager.py#L464
 
+.. _inspect_vaddr-MemoryTranslation-plugin:
+
 inspect_vaddr (MemoryTranslation_)
 ----------------------------------
 Inspect the mapping of a virtual address.
@@ -9598,6 +10138,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _MemoryTranslation: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/inspection.py#L28
 
+.. _null-Null-plugin:
+
 null (Null_)
 ------------
 This plugin does absolutely nothing.
@@ -9605,6 +10147,8 @@ This plugin does absolutely nothing.
 It is used to measure startup overheads.
 
 .. _Null: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/core.py#L594
+
+.. _address_resolver-PEAddressResolver-plugin:
 
 address_resolver (PEAddressResolver_)
 -------------------------------------
@@ -9621,6 +10165,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _PEAddressResolver: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/windows/address_resolver.py#L356
+
+.. _peinfo-PEInfo-plugin:
 
 peinfo (PEInfo_)
 ----------------
@@ -9737,6 +10283,8 @@ variety of information about it:
   ...
 
 
+.. _parse_pdb-ParsePDB-plugin:
+
 parse_pdb (ParsePDB_)
 ---------------------
 Parse the PDB streams.
@@ -9803,6 +10351,8 @@ this plugin directly in most cases.
 
 
 
+.. _p-Printer-plugin:
+
 p (Printer_)
 ------------
 A plugin to print an object.
@@ -9814,12 +10364,16 @@ A plugin to print an object.
 This plugin is an alias to the print python command. Use it when you want to
 print something to the console.
 
+.. _raise_the_roof-RaisingTheRoof-plugin:
+
 raise_the_roof (RaisingTheRoof_)
 --------------------------------
 A plugin that exists to break your tests and make you cry.
 
 
 .. _RaisingTheRoof: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/core.py#L1125
+
+.. _agent-RekallAgent-plugin:
 
 agent (RekallAgent_)
 --------------------
@@ -9834,6 +10388,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _RekallAgent: https://github.com/google/rekall/blob/master//rekall-agent/rekall_agent/agent.py#L326
+
+.. _moo-RekallBovineExperience3000-plugin:
 
 moo (RekallBovineExperience3000_)
 ---------------------------------
@@ -9850,6 +10406,8 @@ same time:
 
 .. _RekallBovineExperience3000: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/bovine.py#L35
 
+.. _run-Run-plugin:
+
 run (Run_)
 ----------
 A plugin which runs its argument (using eval).
@@ -9859,6 +10417,8 @@ point. It is not available when Rekall is used as a library since it allows
 arbitrary code execution.
 
 .. _Run: https://github.com/google/rekall/blob/master//rekall-core/rekall/rekal.py#L52
+
+.. _run_flow-RunFlow-plugin:
 
 run_flow (RunFlow_)
 -------------------
@@ -9876,6 +10436,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _RunFlow: https://github.com/google/rekall/blob/master//rekall-agent/rekall_agent/agent.py#L218
+
+.. _search-Search-plugin:
 
 search (Search_)
 ----------------
@@ -10028,6 +10590,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _Search: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/common/efilter_plugins/search.py#L438
 
+.. _sdel-SessionDelete-plugin:
+
 sdel (SessionDelete_)
 ---------------------
 Delete a session.
@@ -10035,12 +10599,16 @@ Delete a session.
 
 .. _SessionDelete: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/ipython.py#L132
 
+.. _slist-SessionList-plugin:
+
 slist (SessionList_)
 --------------------
 List the sessions available.
 
 
 .. _SessionList: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/ipython.py#L95
+
+.. _smod-SessionMod-plugin:
 
 smod (SessionMod_)
 ------------------
@@ -10051,6 +10619,8 @@ Any session parameters can be set here. For example:
 smod colors="no", paging_limit=10, pager="less"
 
 .. _SessionMod: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/ipython.py#L146
+
+.. _snew-SessionNew-plugin:
 
 snew (SessionNew_)
 ------------------
@@ -10107,12 +10677,16 @@ other.
 
 
 
+.. _sswitch-SessionSwitch-plugin:
+
 sswitch (SessionSwitch_)
 ------------------------
 Changes the current session to the session with session_id.
 
 
 .. _SessionSwitch: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/tools/ipython.py#L106
+
+.. _cc-SetPartitionContext-plugin:
 
 cc (SetPartitionContext_)
 -------------------------
@@ -10137,6 +10711,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _SetPartitionContext: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/tsk.py#L204
+
+.. _simple_yarascan-SimpleYaraScan-plugin:
 
 simple_yarascan (SimpleYaraScan_)
 ---------------------------------
@@ -10165,6 +10741,8 @@ yara_file                      String               The yara signature file to r
 
 .. _SimpleYaraScan: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/yarascanner.py#L163
 
+.. _fls-TSKFls-plugin:
+
 fls (TSKFls_)
 -------------
 A mixin for those plugins requiring a physical address space.
@@ -10189,6 +10767,8 @@ verbosity                      IntParser            An integer reflecting the am
 
 .. _TSKFls: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/tsk.py#L278
 
+.. _mmls-TskMmls-plugin:
+
 mmls (TskMmls_)
 ---------------
 A mixin for those plugins requiring a physical address space.
@@ -10211,6 +10791,8 @@ verbosity                      IntParser            An integer reflecting the am
 ============================== ==================== ========================================
 
 .. _TskMmls: https://github.com/google/rekall/blob/master//rekall-core/rekall/plugins/filesystems/tsk.py#L252
+
+.. _version_scan-VersionScan-plugin:
 
 version_scan (VersionScan_)
 ---------------------------
@@ -10252,6 +10834,8 @@ windows kernel. Note how hits can be restricted by using a regular expression.
   0x0000027bb5fc F8E2A8B5C9B74BF4A6E4A48F180099942 ntkrnlmp.pdb
 
 
+
+.. _vmscan-VmScan-plugin:
 
 vmscan (VmScan_)
 ----------------

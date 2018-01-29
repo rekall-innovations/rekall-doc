@@ -63,6 +63,7 @@ def MaybeAddContent(result, name):
 def GenerateRST(api):
     result = []
     title = "%s (%s_)" % (api["name"], api["plugin"])
+    result.append(".. _%s-%s-plugin:\n" % (api["name"], api["plugin"]))
     result.append(title)
     result.append("-" * len(title))
     result.append(api["description"])
