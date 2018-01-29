@@ -165,3 +165,7 @@ texinfo_documents = [
      author, 'RekallForensics', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+def setup(app):
+    app.add_stylesheet('css/custom.css')
